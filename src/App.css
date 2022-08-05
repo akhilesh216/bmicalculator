@@ -1,38 +1,111 @@
-.App {
+.first {
+  width: 250;
+  height: 100%;
+  background: red;
+  overflow: hidden;
+}
+.insidebox {
+  position: relative;
+  width: 70%;
+  height: 35%;
+  margin: auto;
+  margin-top: 12%;
+  margin-bottom: 5%;
+  background: rgb(170, 225, 170);
+  border: 10px;
+  border-style: inset;
+  color: rgb(32, 32, 33) ;
+}
+
+.output {
+  
+  position: relative;
+  font-family: Tahoma;
+  color: rgb(76, 75, 75);
   text-align: center;
+  font-size: 400%;
+  
+  padding: 0% 2% 0% 2%;
+  overflow: hidden;
+  box-sizing: border-box;
+  
+}
+.flex1 {
+  margin-left: 38%;
+  margin-right: 38%;
+  border: 2px;
+  border: thick double #32a1ce;
+  border-radius: 5%;
+  overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.box1 {
+  height: 300px;
+  padding-bottom: 0%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.flex2 {
+  margin-left: 0%;
+  margin-right: 0%;
+  border: thick double #32a1ce;
+  border-bottom-left-radius: 5%;
+  border-bottom-right-radius: 5%;
+  overflow: hidden;
+}
+
+.height {
+  height: 80px;
+  width: 50%;
+}
+
+.weight {
+  height: 80px;
+  width: 50%;
+}
+
+.input1 {
+  width: 90%;
+  margin-left: 6%;
+  background: rgb(170, 225, 170);
+  font-family: Tahoma;
+  font-weight: bold;
+  border: thick double #32a1ce;
+  border-style: inset;
+}
+
+.spanname {
+  font-weight: bold;
+  padding-left: 21%;
+}
+.bmical {
+  padding-left:5%;
+  font-weight: bold;
+  font-size: 200%;
+}
+.button1{
+  margin-left: 7%;
+  margin-top: 5%;
+  width: 40%;
+  border-style: outset !important;
+  background-color: rgb(34,139,34) !important;
+  border:5px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: black !important;
+}
+  .instruction{
+    padding: 9%;
+    
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .button2{
+    margin-left: 7%;
+    margin-top: 5%;
+    width: 40%;
+    border-style: outset !important;
+    background-color: rgb(255,0,0) !important;
+    border:5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black !important;
+    text-decoration-color: blue;
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
