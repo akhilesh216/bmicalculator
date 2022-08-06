@@ -16,7 +16,7 @@ function App() {
 
   if(parseFloat(value)> parseFloat(min)){
     if(parseFloat(value)> parseFloat(max)){
-      setHeight(value.slice(0, value.length - 1));
+      //setHeight(value.slice(0, value.length - 1));
       
     }
     else{
@@ -39,17 +39,22 @@ function App() {
      //console.log(value);
   if(parseFloat(value)> parseFloat(min)){
     if(parseFloat(value)> parseFloat(max)){
-      setWeight(value.slice(0, value.length - 1));
+      //setWeight(value.slice(0, value.length - 1));
+       //let h1=(value.slice(0, value.length - 1));
+       //setWeight(h1);
+       //console.log(value);
       
     }
     else{
       setWeight(value);
+      //console.log(value);
       setError2(true);
     }
   }
   else{
-    setWeight(value);
-      setError2(false);  
+  setWeight(value);
+  //console.log(value);
+    setError2(false);  
   }
     //setWeight(e.target.value);
   };
@@ -75,7 +80,6 @@ function App() {
   const clickreset = (e) => {
     
     setHeight('');
-    console.log(height);
     setWeight('');
     setDisplay(null);
   }
@@ -89,7 +93,7 @@ function App() {
         </div>
         <button
         disabled={ height=='' || !error1 || weight=='' || !error2 }
-          type="button"
+          type="submit"
           className="btn btn-success button1"
           onClick={click}>
           CALCULATE

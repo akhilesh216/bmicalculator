@@ -54,18 +54,20 @@
 }
 
 .height {
-  height: 80px;
+  height: 90px;
   width: 50%;
 }
 
 .weight {
-  height: 80px;
+  height: 90px;
   width: 50%;
 }
 
 .input1 {
-  width: 90%;
-  margin-left: 6%;
+  width: 80%;
+  height: 45%;
+  margin-left: 10%;
+  margin-top: 1%;
   background: rgb(170, 225, 170);
   font-family: Tahoma;
   font-weight: bold;
@@ -74,13 +76,17 @@
 }
 
 .spanname {
-  font-weight: bold;
   padding-left: 21%;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: rgb(241, 221, 141);
 }
 .bmical {
-  padding-left:5%;
+  padding-left:15%;
   font-weight: bold;
   font-size: 200%;
+  color: rgb(243, 228, 142);
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
 }
 .button1{
   margin-left: 7%;
@@ -91,9 +97,15 @@
   border:5px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: black !important;
+  font-weight: bolder;
 }
   .instruction{
-    padding: 9%;
+   /* padding-left: 15%; */
+    
+    margin-left: 19%;
+    font-size: small;
+    color: rgb(241, 221, 141);
+    /*background-color: rgb(117, 148, 240);*/
     
   }
 
@@ -106,6 +118,7 @@
     border:5px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: black !important;
+    font-weight: bolder;
     text-decoration-color: blue;
   }
 
