@@ -4,8 +4,8 @@ import { useState } from "react";
 import "./App.css";
 
 function App() {
-  const [height, setHeight] = useState();
-  const [weight, setWeight] = useState();
+  const [height, setHeight] = useState('');
+  const [weight, setWeight] = useState('');
   const [display, setDisplay] = useState();
   const [error1, setError1] = useState(true);
   const [error2, setError2] = useState(true);
