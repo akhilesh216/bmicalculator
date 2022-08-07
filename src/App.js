@@ -4,58 +4,51 @@ import { useState } from "react";
 import "./App.css";
 
 function App() {
-  const [height, setHeight] = useState('');
-  const [weight, setWeight] = useState('');
+  const [height, setHeight] = useState("");
+  const [weight, setWeight] = useState("");
   const [display, setDisplay] = useState();
   const [error1, setError1] = useState(true);
   const [error2, setError2] = useState(true);
 
   const heightChangeHandle = (e) => {
-  let { value, min, max } = e.target;
-     //console.log(value);
+    let { value, min, max } = e.target;
+    //console.log(value);
 
-  if(parseFloat(value)> parseFloat(min)){
-    if(parseFloat(value)> parseFloat(max)){
-      //setHeight(value.slice(0, value.length - 1));
-      
-    }
-    else{
+    if (parseFloat(value) > parseFloat(min)) {
+      if (parseFloat(value) > parseFloat(max)) {
+        //setHeight(value.slice(0, value.length - 1));
+      } else {
+        setHeight(value);
+        setError1(true);
+      }
+    } else {
       setHeight(value);
-      setError1(true);
+      setError1(false);
     }
-  }
-  else{
-    setHeight(value);
-      setError1(false);  
-  }
 
-  
-  // console.log(value1);
-  
-  //setHeight(e.target.value);
+    // console.log(value1);
+
+    //setHeight(e.target.value);
   };
   const weightChangeHandle = (e) => {
     let { value, min, max } = e.target;
-     //console.log(value);
-  if(parseFloat(value)> parseFloat(min)){
-    if(parseFloat(value)> parseFloat(max)){
-      //setWeight(value.slice(0, value.length - 1));
-       //let h1=(value.slice(0, value.length - 1));
-       //setWeight(h1);
-       //console.log(value);
-      
-    }
-    else{
+    console.log(value);
+    if (parseFloat(value) > parseFloat(min)) {
+      if (parseFloat(value) > parseFloat(max)) {
+        //setWeight(value.slice(0, value.length - 1));
+        //let h1=(value.slice(0, value.length - 1));
+        //setWeight(h1);
+        //console.log(value);
+      } else {
+        setWeight(value);
+        //console.log(value);
+        setError2(true);
+      }
+    } else {
       setWeight(value);
       //console.log(value);
-      setError2(true);
+      setError2(false);
     }
-  }
-  else{
-  setWeight(value);
-  //console.log(value);
-    setError2(false);  
-  }
     //setWeight(e.target.value);
   };
 
@@ -68,47 +61,49 @@ function App() {
         weight: parseFloat(weight),
       }),
     });
-   let bmi_value = await result.json();
+    let bmi_value = await result.json();
     //console.log(bmi_value);
-   // console.log(bmi_value.bmi);
-   //setDisplay(bmi_value.bmi);
-   setDisplay(parseFloat(bmi_value.bmi).toFixed(2));
-   //console.log(display);
-   //let roundDisplay = parseInt(bmi_value.bmi).toFixed(2);
+    // console.log(bmi_value.bmi);
+    //setDisplay(bmi_value.bmi);
+    setDisplay(parseFloat(bmi_value.bmi).toFixed(2));
+    //console.log(display);
+    //let roundDisplay = parseInt(bmi_value.bmi).toFixed(2);
   };
 
   const clickreset = (e) => {
-    
-    setHeight('');
-    setWeight('');
+    setHeight("");
+    setWeight("");
     setDisplay(null);
-  }
+  };
 
   return (
     <div className="d-flex flex-column  mt-3 flex1">
       <div className=" bg-secondary box1">
         <span className="bmical"> BMI CALCULATOR</span>
         <div className="insidebox">
-          <span className="output" >{display}</span>
+          <div className="output">{display}</div>
         </div>
-        <button
-        disabled={ height=='' || !error1 || weight=='' || !error2 }
-          type="submit"
-          className="btn btn-success button1"
-          onClick={click}>
-          CALCULATE
-        </button>
-        <button
-        
-          type="button"
-          className="btn btn-success button2"
-          onClick={clickreset}>
-          RESET
-        </button>
+        <div className="buttondiv">
+          <button
+            disabled={height == "" || !error1 || weight == "" || !error2}
+            type="submit"
+            className="btn btn-success button1"
+            onClick={click}
+          >
+            CALCULATE
+          </button>
+          <button
+            type="submit"
+            className="btn btn-success button2"
+            onClick={clickreset}
+          >
+            RESET
+          </button>
+        </div>
       </div>
 
-      <div className="d-flex flex-row flex2">
-        <div className=" bg-primary height ">
+      <div className="d-flex flex-row  bg-primary flex2">
+        <div className=" bg-primary heightweight ">
           <span className="spanname">Height(cms)</span>
           <input
             className="input1"
@@ -120,9 +115,9 @@ function App() {
             max="300"
             required
           ></input>
-          {!error1&&<span className="instruction" >min: 30   max: 300</span>}
+          {!error1 && <span className="instruction">min: 30 max: 300</span>}
         </div>
-        <div className=" bg-primary weight ">
+        <div className=" bg-primary heightweight ">
           <span className="spanname"> Weight(kgs)</span>
           <input
             className="input1"
@@ -134,7 +129,7 @@ function App() {
             max="300"
             required
           ></input>
-          {!error2&&<span className="instruction" >min: 10   max: 300</span>}
+          {!error2 && <span className="instruction">min: 10 max: 300</span>}
         </div>
       </div>
     </div>

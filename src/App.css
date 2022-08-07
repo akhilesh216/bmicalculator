@@ -1,14 +1,7 @@
-.first {
-  width: 250;
-  height: 100%;
-  background: red;
-  overflow: hidden;
-}
-
 .insidebox {
   position: relative;
-  width: 70%;
-  height: 35%;
+  width: 235px;
+  height: 115px;
   margin: auto;
   margin-top: 12%;
   margin-bottom: 5%;
@@ -19,105 +12,126 @@
 }
 
 .output {
-
   position: relative;
   font-family: Tahoma;
   color: rgb(76, 75, 75);
   text-align: center;
-  font-size: 400%;
-
-  padding: 0% 2% 0% 2%;
+  font-size: 340%;
+  transform: scale(1, 2);
+  /*padding: 0% 2% 0% 2%;*/
+  margin: 4px;
   overflow: hidden;
   box-sizing: border-box;
-
 }
 
 .flex1 {
   margin-left: 38%;
   margin-right: 38%;
-  border: 2px;
+  /*border: 2px;*/
   border: thick double #32a1ce;
   border-radius: 5%;
   overflow: hidden;
 }
 
 .box1 {
-  height: 300px;
-  padding-bottom: 0%;
+  /*height: 300px;
+  padding-bottom: 0%;*/
+  padding: 0px 0px 8px 0px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
 }
 
 .flex2 {
-  margin-left: 0%;
-  margin-right: 0%;
+  /*margin-left: 0%;
+  margin-right: 0%;*/
+
   border: thick double #32a1ce;
-  border-bottom-left-radius: 5%;
-  border-bottom-right-radius: 5%;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
   overflow: hidden;
+  height: 100px;
+  /*flex: 1;*/
 }
 
-.height {
-  height: 90px;
-  width: 50%;
+.heightweight {
+  /*height: 90px;
+  width: 50%;*/
+  padding: 0px 12px 0px 12px;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  width: 100%;
 }
 
-.weight {
-  height: 90px;
-  width: 50%;
-}
+/*.heightweight {*/
+/* height: 90px;
+  width: 50%;*/
+/* padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    width: 100%;
+}*/
 
 .input1 {
-  width: 80%;
-  height: 45%;
-  margin-left: 10%;
-  margin-top: 1%;
+  /*width: 80%;
+  margin-left: 10%;*/
+
+  height: 35px;
+  margin-top: 3%;
   background: rgb(170, 225, 170);
   font-family: Tahoma;
-  font-weight: bold;
+  font-weight: 1px;
+  font-size: 22px;
   border: thick double #32a1ce;
   border-style: inset;
+  transform: scale(1, 1.2);
 }
 
 .spanname {
-  padding-left: 21%;
+  /*padding-left: 21%;*/
   font-weight: bold;
   letter-spacing: 1px;
   color: rgb(241, 221, 141);
+  text-align: center;
 }
 
 .bmical {
-  padding-left: 15%;
+  /*padding-left: 15%;*/
   font-weight: bold;
   font-size: 200%;
   color: rgb(243, 228, 142);
   text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+  align-self: center;
+}
+
+.buttondiv {
+  display: flex;
+  column-gap: 30px;
+  justify-content: center;
+  
 }
 
 .button1 {
-  margin-left: 7%;
+  /*margin-left: 7%;*/
   margin-top: 5%;
   width: 40%;
+  height:50px;
   border-style: outset !important;
   background-color: rgb(34, 139, 34) !important;
   border: 5px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: black !important;
   font-weight: bolder;
-}
-
-.instruction {
-  /* padding-left: 15%; */
-
-  margin-left: 19%;
-  font-size: small;
-  color: rgb(241, 221, 141);
-  /*background-color: rgb(117, 148, 240);*/
-
+  font-size: 20px;
 }
 
 .button2 {
-  margin-left: 7%;
+  /*margin-left: 7%;*/
   margin-top: 5%;
   width: 40%;
+  height:50px;
   border-style: outset !important;
   background-color: rgb(255, 0, 0) !important;
   border: 5px;
@@ -125,4 +139,15 @@
   color: black !important;
   font-weight: bolder;
   text-decoration-color: blue;
+  font-size: 20px;
+}
+
+.instruction {
+  /* padding-left: 15%; 
+  margin-left: 19%;*/
+  padding-top: 7px;
+  font-size: small;
+  color: rgb(241, 221, 141);
+  /*background-color: rgb(117, 148, 240);*/
+  text-align: center;
 }
